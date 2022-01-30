@@ -1,6 +1,6 @@
 #This is a game of Rock Paper Scissors
 
-from multiprocessing import RLock
+
 import random  # purpose of random is for computers input
 
 
@@ -29,7 +29,7 @@ def main():
  while True:
 
     
-    user_choice=input("\nChoose\n\tRock\n\tPaper\n\tScissors\n\tor Q to quit:    ").lower()          # this will convert any string the user types to lower case 
+    user_choice=input("\nChoose\n\tRock\n\tPaper\n\tScissors\n\tor Q to quit: ").lower()          # this will convert any string the user types to lower case 
                                                                                                      # this helps with putting less condiitonals for the 
     
     
@@ -202,5 +202,6 @@ def main():
         
         continue
     
+
 if __name__ == "__main__":
     main()
