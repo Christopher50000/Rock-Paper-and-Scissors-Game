@@ -1,5 +1,6 @@
 #This is a game of Rock Paper Scissors
 
+from multiprocessing import RLock
 import random  # purpose of random is for computers input
 
 
@@ -12,7 +13,7 @@ def main():
 
  computer_wins=0
 
- print('Hello this is a simple game of Rock Paper Scissors')
+ print('\nHello this is a simple game of Rock Paper Scissors')
 
  count=0     # the number of each round of rock, paper, scissors
 
@@ -28,36 +29,37 @@ def main():
  while True:
 
     
-    user_choice=input("Choose Rock/Paper/Scissors or Q to quit: ").lower()          # this will convert any string the user types to lower case 
-                                                                                    # this helps with putting less condiitonals for the 
+    user_choice=input("\nChoose\n\tRock\n\tPaper\n\tScissors\n\tor Q to quit:    ").lower()          # this will convert any string the user types to lower case 
+                                                                                                     # this helps with putting less condiitonals for the 
     
     
     if user_choice =='q': # if user wants to quit rock paper scissors game 
 
         if count==0:     # if the user never played a round of the game 
             
-            print("No plays were given by User")
+            print("\nNo plays were given by User")
             
             print("Game is shutting down")
 
             break
 
         else:
-         print("Results of game")
+         print("\nResults of game") #\n moves the text to the next line
         
-         print(f'The number of games was {count}')
+         print(f'\tThe number of games was {count}') #\t tabs the text 
         
-         print(f'The number of games you won was {user_wins}')
+         print(f'\tThe number of games you won was {user_wins}')
 
-         print(f'The number of games the computer was {computer_wins}')
+         print(f'\tThe number of games the computer was {computer_wins}')
         
-         print("Outcome for every round ")
+         print("\nOutcome for every round ")
            
 
 
          round_number=1    # round_numbers is a variable that is equal to the round number
-         
-         print(f"{'Round':<5}{'Player Chose': ^17}{'Computer Chose':^17}{'Outcome':^20}") # Header 
+
+     
+         print(f"\t{'Round':<5}{'Player Chose': ^17}{'Computer Chose':^17}{'Outcome':^20}") # Header 
 
          
          for i in range(count):       # this for loop is used to initialize each part of the dictionary 
@@ -77,12 +79,12 @@ def main():
           
         
 
-          print(f"{round_number:<5}{play[i][0]:^17}{play[i][1]:^17}{Round_Outcome[round_number]:^20}")  # outputs results 
+          print(f"\t{round_number:<5}{play[i][0]:^17}{play[i][1]:^17}{Round_Outcome[round_number]:^20}")  # outputs results 
           
           round_number+=1
 
          
-         print("Game is shutting down")
+         print("\nGame is shutting down")
         
         
          break 
@@ -99,7 +101,7 @@ def main():
       
 
       
-    print("You chose" , user_choice +'.')  
+    print("\nYou chose" , user_choice +'.')  
     
     
                                            
@@ -118,13 +120,6 @@ def main():
     
    
     play.append(playlist) 
-
-    print(f"The length {len(play)}")
-    
-
-   
-    
-   
 
    # The below code appends the results from each round 
    # round.append(round_result)
@@ -207,11 +202,5 @@ def main():
         
         continue
     
-
-            
-
-
-
-
 if __name__ == "__main__":
     main()
