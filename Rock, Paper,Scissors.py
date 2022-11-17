@@ -1,5 +1,5 @@
 #This is a game of Rock Paper Scissors
-
+# After a summer of learning Python
 
 import random  # purpose of random is for computers input
 
